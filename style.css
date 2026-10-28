@@ -52,3 +52,5 @@ main h2{margin-top:28px}
 main li{margin:4px 0}
 code{background:var(--panel2);padding:1px 6px;border-radius:5px;font-size:.9em}
 @media(max-width:560px){nav a{margin:0 12px 0 0}.card{padding:14px}}
+
+.fineprint{font-size:.82rem;color:var(--muted);margin:8px 0 0}.fineprint a{color:var(--accent)}

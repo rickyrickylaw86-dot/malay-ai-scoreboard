@@ -5,4 +5,4 @@ A static site ranking AI models and tools by how well they handle Bahasa Malaysi
 Data: `data/data.json` (regenerate with `python3 data/build_data.py`).
 Local preview: `python3 -m http.server 8765`, then open http://127.0.0.1:8765/ (must be served over http, not file://).
 
-Newsletter and sponsor-interest forms are placeholders and not connected to anything yet.
+The newsletter signup posts to Buttondown (`malayaiscoreboard`). The sponsor-interest form is a placeholder and not connected to anything yet.
