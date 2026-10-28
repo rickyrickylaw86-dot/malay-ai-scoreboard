@@ -1,0 +1,964 @@
+{
+ "site": {
+  "name": "Malay AI Scoreboard",
+  "status": "DRAFT – not launched",
+  "retrieved": "2026-10-28",
+  "disclaimer": "We do not compute our own scores yet. Every number below belongs to the source named next to it. We never merge scores from different sources into one ranking."
+ },
+ "tabs": [
+  {
+   "id": "chat",
+   "label": "Chat (LLMs)",
+   "intro": "How well do chat models handle Bahasa Malaysia? Three sources, three different tests (one of them is the vendor’s own claim). Pick one below.",
+   "boards": [
+    {
+     "id": "seahelm",
+     "title": "SEA-HELM — Malay competency score",
+     "owner": "AI Singapore (SEA-HELM leaderboard)",
+     "owner_type": "Third-party academic/public benchmark",
+     "date": "2026-09-18",
+     "retrieved": "2026-10-28",
+     "url": "https://leaderboard.sea-lion.ai/detailed/MS",
+     "metric": "MS = Malay competency average (0–100, higher is better); ± is half the 95% bootstrap CI shown by the source.",
+     "caveat": "Only open-weight models of ≤200B parameters are on this leaderboard (no GPT, Claude or Gemini API models). SEA-LION is made by AI Singapore, which also runs the leaderboard.",
+     "columns": [
+      [
+       "model",
+       "Model"
+      ],
+      [
+       "org",
+       "Maker"
+      ],
+      [
+       "ms",
+       "MS (Malay)"
+      ],
+      [
+       "ci",
+       "±95% CI"
+      ],
+      [
+       "knowledge",
+       "Knowledge"
+      ],
+      [
+       "instruct",
+       "Inst. following"
+      ],
+      [
+       "chat",
+       "Multi-turn chat"
+      ],
+      [
+       "nlu",
+       "NLU"
+      ],
+      [
+       "nlg",
+       "NLG"
+      ],
+      [
+       "cultural",
+       "Cultural"
+      ],
+      [
+       "safety",
+       "Safety"
+      ]
+     ],
+     "primary": "ms",
+     "rows": [
+      {
+       "model": "Qwen 3.5 122B MoE",
+       "org": "Alibaba",
+       "ms": 76.31,
+       "ci": "±1.76",
+       "cultural": 64.19,
+       "instruct": 88.7,
+       "knowledge": 85.99,
+       "chat": 86.35,
+       "nlg": 91.94,
+       "nlu": 73.43,
+       "safety": 43.58
+      },
+      {
+       "model": "Gemma 4 31B",
+       "org": "Google",
+       "ms": 76.27,
+       "ci": "±1.73",
+       "cultural": 65.45,
+       "instruct": 90.72,
+       "knowledge": 83.96,
+       "chat": 85.29,
+       "nlg": 93.09,
+       "nlu": 74.15,
+       "safety": 41.21
+      },
+      {
+       "model": "Qwen 3.6 27B",
+       "org": "Alibaba",
+       "ms": 76.26,
+       "ci": "±1.74",
+       "cultural": 71.14,
+       "instruct": 89.19,
+       "knowledge": 84.0,
+       "chat": 86.08,
+       "nlg": 92.32,
+       "nlu": 71.78,
+       "safety": 39.31
+      },
+      {
+       "model": "SEA-LION v4.5 (Qwen) 27B",
+       "org": "AISG",
+       "ms": 75.23,
+       "ci": "±1.70",
+       "cultural": 67.57,
+       "instruct": 88.32,
+       "knowledge": 83.31,
+       "chat": 82.12,
+       "nlg": 92.44,
+       "nlu": 72.29,
+       "safety": 40.57
+      },
+      {
+       "model": "Muse Glimmer 30B",
+       "org": "Meta",
+       "ms": 74.14,
+       "ci": "±1.81",
+       "cultural": 53.14,
+       "instruct": 88.57,
+       "knowledge": 82.38,
+       "chat": 85.45,
+       "nlg": 91.68,
+       "nlu": 72.5,
+       "safety": 45.25
+      },
+      {
+       "model": "SEA-LION v4.8 (Nemotron) 120B MoE",
+       "org": "AISG",
+       "ms": 73.25,
+       "ci": "±1.73",
+       "cultural": 59.32,
+       "instruct": 81.75,
+       "knowledge": 81.83,
+       "chat": 84.33,
+       "nlg": 88.67,
+       "nlu": 70.74,
+       "safety": 46.14
+      },
+      {
+       "model": "GPT OSS 120B MoE (mxfp4)",
+       "org": "OpenAI",
+       "ms": 69.68,
+       "ci": "±1.90",
+       "cultural": 54.19,
+       "instruct": 80.29,
+       "knowledge": 74.95,
+       "chat": 83.22,
+       "nlg": 90.96,
+       "nlu": 69.77,
+       "safety": 34.39
+      },
+      {
+       "model": "Mistral Medium 3.5 128B",
+       "org": "Mistral AI",
+       "ms": 68.93,
+       "ci": "±1.68",
+       "cultural": 33.04,
+       "instruct": 80.25,
+       "knowledge": 79.98,
+       "chat": 82.84,
+       "nlg": 91.94,
+       "nlu": 71.48,
+       "safety": 42.96
+      },
+      {
+       "model": "Nemotron 3 Super 120B MoE",
+       "org": "NVIDIA",
+       "ms": 68.66,
+       "ci": "±1.75",
+       "cultural": 54.88,
+       "instruct": 74.55,
+       "knowledge": 80.14,
+       "chat": 81.37,
+       "nlg": 86.21,
+       "nlu": 68.72,
+       "safety": 34.73
+      },
+      {
+       "model": "Apertus 1.5 70B",
+       "org": "Swiss AI",
+       "ms": 65.54,
+       "ci": "±1.81",
+       "cultural": 50.35,
+       "instruct": 81.21,
+       "knowledge": 60.77,
+       "chat": 69.47,
+       "nlg": 91.32,
+       "nlu": 64.72,
+       "safety": 40.91
+      },
+      {
+       "model": "GLM 4.7 Flash 30B MoE",
+       "org": "Z.ai",
+       "ms": 65.5,
+       "ci": "±1.77",
+       "cultural": 48.26,
+       "instruct": 75.75,
+       "knowledge": 70.57,
+       "chat": 72.34,
+       "nlg": 88.91,
+       "nlu": 66.36,
+       "safety": 36.3
+      },
+      {
+       "model": "SEA-LION v4.5 (Gemma E2B) 5B MoE",
+       "org": "AISG",
+       "ms": 62.28,
+       "ci": "±1.82",
+       "cultural": 45.42,
+       "instruct": 82.06,
+       "knowledge": 53.28,
+       "chat": 75.93,
+       "nlg": 90.3,
+       "nlu": 64.4,
+       "safety": 24.58
+      },
+      {
+       "model": "SEA-LION v4.8 (Nemotron) 30B MoE",
+       "org": "AISG",
+       "ms": 62.09,
+       "ci": "±1.67",
+       "cultural": 41.47,
+       "instruct": 71.33,
+       "knowledge": 76.1,
+       "chat": 83.37,
+       "nlg": 85.86,
+       "nlu": 55.17,
+       "safety": 21.35
+      },
+      {
+       "model": "Gemma 4 (E2B) 5B",
+       "org": "Google",
+       "ms": 61.46,
+       "ci": "±1.84",
+       "cultural": 40.89,
+       "instruct": 80.3,
+       "knowledge": 53.33,
+       "chat": 76.1,
+       "nlg": 90.0,
+       "nlu": 64.23,
+       "safety": 25.37
+      },
+      {
+       "model": "Nemotron 3.5 Lightning 30B MoE",
+       "org": "NVIDIA",
+       "ms": 58.76,
+       "ci": "±1.71",
+       "cultural": 30.77,
+       "instruct": 59.3,
+       "knowledge": 71.22,
+       "chat": 82.8,
+       "nlg": 81.16,
+       "nlu": 57.31,
+       "safety": 28.78
+      },
+      {
+       "model": "Olmo 3.1 32B",
+       "org": "AI2",
+       "ms": 58.14,
+       "ci": "±2.01",
+       "cultural": 51.19,
+       "instruct": 70.87,
+       "knowledge": 39.05,
+       "chat": 71.11,
+       "nlg": 86.14,
+       "nlu": 56.1,
+       "safety": 32.55
+      },
+      {
+       "model": "MERaLiON 2 10B",
+       "org": "A*STAR",
+       "ms": 55.29,
+       "ci": "±1.92",
+       "cultural": 26.16,
+       "instruct": 62.9,
+       "knowledge": 50.06,
+       "chat": 54.75,
+       "nlg": 86.16,
+       "nlu": 64.74,
+       "safety": 42.24
+      },
+      {
+       "model": "Tiny Aya Water 3B",
+       "org": "Cohere Labs",
+       "ms": 32.71,
+       "ci": "±1.50",
+       "cultural": 1.49,
+       "instruct": 63.94,
+       "knowledge": 31.66,
+       "chat": 29.21,
+       "nlg": 59.17,
+       "nlu": 25.67,
+       "safety": 17.83
+      }
+     ],
+     "dec": {
+      "ms": 2,
+      "knowledge": 2,
+      "instruct": 2,
+      "chat": 2,
+      "nlu": 2,
+      "nlg": 2,
+      "cultural": 2,
+      "safety": 2
+     }
+    },
+    {
+     "id": "malaymmlu-third",
+     "title": "MalayMMLU — independent 1,100-question run (pendakwah.tech)",
+     "owner": "pendakwah.tech (independent site; we have not verified who runs it)",
+     "owner_type": "Third-party",
+     "date": "2026-09 (page notes models added 2026-09-02; exact last-update date not shown)",
+     "retrieved": "2026-10-28",
+     "url": "https://pendakwah.tech/bahasa/mmlu/",
+     "metric": "Accuracy % on a fixed stratified sample of 1,100 MalayMMLU questions (220 per category), 0-shot, temperature 0, generate-and-parse method.",
+     "caveat": "Different method from ILMU's claim (first-token logprob), so absolute numbers can differ by several points. Models reached via OpenRouter / Ollama Cloud / ILMU API. Random guessing is ~25%. Small sample = wide error bars (not published by the source).",
+     "columns": [
+      [
+       "model",
+       "Model"
+      ],
+      [
+       "org",
+       "Maker"
+      ],
+      [
+       "acc",
+       "Accuracy %"
+      ],
+      [
+       "stem",
+       "STEM"
+      ],
+      [
+       "bahasa",
+       "Language"
+      ],
+      [
+       "social",
+       "Social sci."
+      ],
+      [
+       "human",
+       "Humanities"
+      ],
+      [
+       "other",
+       "Others"
+      ]
+     ],
+     "primary": "acc",
+     "rows": [
+      {
+       "model": "Gemini 3.1 Pro",
+       "org": "Google",
+       "acc": 91.5,
+       "stem": 91,
+       "bahasa": 96,
+       "social": 89,
+       "human": 93,
+       "other": 89
+      },
+      {
+       "model": "GPT-5.5",
+       "org": "OpenAI",
+       "acc": 89.3,
+       "stem": 89,
+       "bahasa": 93,
+       "social": 85,
+       "human": 90,
+       "other": 89
+      },
+      {
+       "model": "Claude Opus 4.8",
+       "org": "Anthropic",
+       "acc": 88.7,
+       "stem": 86,
+       "bahasa": 90,
+       "social": 86,
+       "human": 92,
+       "other": 89
+      },
+      {
+       "model": "Kimi K3 (via Ollama Cloud)",
+       "org": "Moonshot",
+       "acc": 87.5,
+       "stem": 89,
+       "bahasa": 91,
+       "social": 84,
+       "human": 90,
+       "other": 83
+      },
+      {
+       "model": "Qwen 3.7 Max",
+       "org": "Alibaba",
+       "acc": 86.6,
+       "stem": 83,
+       "bahasa": 92,
+       "social": 86,
+       "human": 91,
+       "other": 81
+      },
+      {
+       "model": "DeepSeek V4 Pro 0813 (via Ollama Cloud)",
+       "org": "DeepSeek",
+       "acc": 85.5,
+       "stem": 86,
+       "bahasa": 89,
+       "social": 82,
+       "human": 87,
+       "other": 84
+      },
+      {
+       "model": "Qwen 3.5 397B (via Ollama Cloud)",
+       "org": "Alibaba",
+       "acc": 85.4,
+       "stem": 85,
+       "bahasa": 90,
+       "social": 81,
+       "human": 87,
+       "other": 84
+      },
+      {
+       "model": "ILMU GLM-5.1",
+       "org": "YTL AI Labs",
+       "acc": 84.0,
+       "stem": 85,
+       "bahasa": 86,
+       "social": 80,
+       "human": 85,
+       "other": 84
+      },
+      {
+       "model": "DeepSeek V4 Pro",
+       "org": "DeepSeek",
+       "acc": 83.8,
+       "stem": 85,
+       "bahasa": 89,
+       "social": 80,
+       "human": 84,
+       "other": 81
+      },
+      {
+       "model": "ILMU v3.1",
+       "org": "YTL AI Labs",
+       "acc": 83.1,
+       "stem": 84,
+       "bahasa": 87,
+       "social": 80,
+       "human": 84,
+       "other": 81
+      },
+      {
+       "model": "MiniMax M3 (via Ollama Cloud)",
+       "org": "MiniMax",
+       "acc": 82.8,
+       "stem": 85,
+       "bahasa": 85,
+       "social": 79,
+       "human": 87,
+       "other": 78
+      },
+      {
+       "model": "Grok 4.3",
+       "org": "xAI",
+       "acc": 82.3,
+       "stem": 81,
+       "bahasa": 84,
+       "social": 80,
+       "human": 83,
+       "other": 83
+      },
+      {
+       "model": "GLM-5.2",
+       "org": "Z.ai",
+       "acc": 81.8,
+       "stem": 83,
+       "bahasa": 86,
+       "social": 84,
+       "human": 81,
+       "other": 75
+      },
+      {
+       "model": "Mistral Large 3 (via Ollama Cloud)",
+       "org": "Mistral",
+       "acc": 81.5,
+       "stem": 82,
+       "bahasa": 86,
+       "social": 79,
+       "human": 82,
+       "other": 77
+      },
+      {
+       "model": "Kimi K2.6",
+       "org": "Moonshot",
+       "acc": 80.7,
+       "stem": 85,
+       "bahasa": 86,
+       "social": 75,
+       "human": 81,
+       "other": 76
+      },
+      {
+       "model": "Mistral Large 2512",
+       "org": "Mistral",
+       "acc": 80.4,
+       "stem": 79,
+       "bahasa": 83,
+       "social": 80,
+       "human": 82,
+       "other": 77
+      },
+      {
+       "model": "MiniMax M3",
+       "org": "MiniMax",
+       "acc": 79.6,
+       "stem": 82,
+       "bahasa": 84,
+       "social": 77,
+       "human": 79,
+       "other": 76
+      },
+      {
+       "model": "Llama 4 Maverick",
+       "org": "Meta",
+       "acc": 78.1,
+       "stem": 84,
+       "bahasa": 79,
+       "social": 76,
+       "human": 78,
+       "other": 74
+      },
+      {
+       "model": "ILMU Vision v1.3",
+       "org": "YTL AI Labs",
+       "acc": 74.9,
+       "stem": 79,
+       "bahasa": 75,
+       "social": 73,
+       "human": 74,
+       "other": 74
+      },
+      {
+       "model": "ILMU Mini v3.3",
+       "org": "YTL AI Labs",
+       "acc": 71.8,
+       "stem": 74,
+       "bahasa": 72,
+       "social": 72,
+       "human": 71,
+       "other": 70
+      },
+      {
+       "model": "GLM-5.3 (via Ollama Cloud)",
+       "org": "Z.ai",
+       "acc": 71.6,
+       "stem": 65,
+       "bahasa": 74,
+       "social": 70,
+       "human": 76,
+       "other": 74
+      }
+     ],
+     "dec": {
+      "acc": 1
+     }
+    },
+    {
+     "id": "ilmu-claim",
+     "title": "MalayMMLU — ILMU's own claim (vendor-reported)",
+     "owner": "YTL AI Labs / ILMU (the vendor being ranked)",
+     "owner_type": "VENDOR CLAIM — not independently verified by us",
+     "date": "ILMU technical report & system card (publication date not shown on pages retrieved)",
+     "retrieved": "2026-10-28",
+     "url": "https://www.ilmu.ai/assets/ilmu-technical-report.pdf",
+     "url2": "https://www.ilmu.ai/assets/ilmu-system-card.pdf",
+     "metric": "MalayMMLU macro-average accuracy %, zero-shot, first-token accuracy, 24,213 questions.",
+     "caveat": "Self-reported by the model's maker, and the compared models are older (e.g. GPT-4o). The MalayMMLU benchmark itself comes from UM × YTL AI Labs, which also makes ILMU. Independent commentators have questioned whether first-token scoring favours some models; we list only what ILMU published.",
+     "columns": [
+      [
+       "model",
+       "Model"
+      ],
+      [
+       "org",
+       "Maker"
+      ],
+      [
+       "acc",
+       "MalayMMLU %"
+      ]
+     ],
+     "primary": "acc",
+     "rows": [
+      {
+       "model": "ILMU",
+       "org": "YTL AI Labs",
+       "acc": 87.2,
+       "vendor": true
+      },
+      {
+       "model": "GPT-4o",
+       "org": "OpenAI",
+       "acc": 84.97,
+       "vendor": false
+      },
+      {
+       "model": "DeepSeek-V3",
+       "org": "DeepSeek",
+       "acc": 80.56,
+       "vendor": false
+      },
+      {
+       "model": "GPT-5",
+       "org": "OpenAI",
+       "acc": 79.53,
+       "vendor": false
+      },
+      {
+       "model": "Sahabat-AI-v2-70B",
+       "org": "—",
+       "acc": 78.31,
+       "vendor": false
+      },
+      {
+       "model": "Llama-3.1-70B",
+       "org": "Meta",
+       "acc": 78.07,
+       "vendor": false
+      },
+      {
+       "model": "SEA-LION v3-70B",
+       "org": "AISG",
+       "acc": 78.03,
+       "vendor": false
+      },
+      {
+       "model": "Mallam 2.5 Small",
+       "org": "Mesolitica",
+       "acc": 71.35,
+       "vendor": false,
+       "note": "Tech report Table 2 shows 71.35; system card subject table shows 71.53."
+      },
+      {
+       "model": "Merdeka-LLM (HR 3B)",
+       "org": "Agmo",
+       "acc": 57.28,
+       "vendor": false
+      },
+      {
+       "model": "Falcon3-10B",
+       "org": "—",
+       "acc": 56.38,
+       "vendor": false
+      }
+     ],
+     "dec": {
+      "acc": 2
+     }
+    }
+   ],
+   "prices": {
+    "title": "Published API prices in RM (ILMU only, so far)",
+    "source": "ILMU API docs",
+    "url": "https://docs.ilmu.ai/docs/models/pricing",
+    "retrieved": "2026-10-28",
+    "columns": [
+     [
+      "model",
+      "Model"
+     ],
+     [
+      "input",
+      "Input / 1M tokens"
+     ],
+     [
+      "output",
+      "Output / 1M tokens"
+     ]
+    ],
+    "rows": [
+     {
+      "model": "ilmu-v3.1",
+      "input": "RM 4.00",
+      "output": "RM 16.00"
+     },
+     {
+      "model": "ilmu-mini-v3.3",
+      "input": "RM 0.20",
+      "output": "RM 1.20"
+     },
+     {
+      "model": "ilmu-vision-v1.3",
+      "input": "RM 1.60",
+      "output": "RM 4.80"
+     }
+    ],
+    "note": "RM prices for the other vendors are coming soon (we will convert from official USD price pages and show the exchange rate and date used)."
+   }
+  },
+  {
+   "id": "stt",
+   "label": "Speech-to-text",
+   "intro": "Word error rate (WER, lower is better) on Malaysian speech including Manglish-style code-switching.",
+   "boards": [
+    {
+     "id": "revolab",
+     "title": "Revolab Malaysian ASR Leaderboard",
+     "owner": "Revolab",
+     "owner_type": "VENDOR-RUN — Revolab ranks its own Aisyah models alongside others (marked)",
+     "date": "2026-08-12",
+     "retrieved": "2026-10-28",
+     "url": "https://www.revolab.ai/blogs/malaysian-asr-leaderboard/",
+     "metric": "WER % on the Revolab ASR Benchmark: 820 public + 1,079 private samples = 1,899 total across 12 Malaysian speech domains. 'Ins' = insertion rate (hallucinated words). Ranked here by combined WER, as the source does.",
+     "caveat": "Run by a vendor with models on the board. Revolab says its data is public on HuggingFace and code is on GitHub so results can be audited; we have not yet reproduced them.",
+     "columns": [
+      [
+       "model",
+       "Model"
+      ],
+      [
+       "org",
+       "Maker"
+      ],
+      [
+       "pub",
+       "Public WER %"
+      ],
+      [
+       "priv",
+       "Private WER %"
+      ],
+      [
+       "comb",
+       "Combined WER %"
+      ],
+      [
+       "ins",
+       "Insertion %"
+      ]
+     ],
+     "primary": "comb",
+     "asc": true,
+     "rows": [
+      {
+       "model": "Aisyah 1.0 Pro",
+       "org": "Revolab",
+       "pub": 4.89,
+       "priv": 6.58,
+       "comb": 5.79,
+       "ins": 0.62,
+       "vendor": true
+      },
+      {
+       "model": "Scribe v2",
+       "org": "ElevenLabs",
+       "pub": 4.79,
+       "priv": 8.29,
+       "comb": 6.67,
+       "ins": 0.7,
+       "vendor": false
+      },
+      {
+       "model": "Gemini 2.5 Pro",
+       "org": "Google",
+       "pub": 5.3,
+       "priv": 8.49,
+       "comb": 7.0,
+       "ins": 1.0,
+       "vendor": false
+      },
+      {
+       "model": "Qwen-Audio 3.0 ASR Flash",
+       "org": "Alibaba",
+       "pub": 7.22,
+       "priv": 10.87,
+       "comb": 9.17,
+       "ins": 1.11,
+       "vendor": false
+      },
+      {
+       "model": "Ilmu ASR v4.2",
+       "org": "YTL AI Labs",
+       "pub": 7.78,
+       "priv": 10.97,
+       "comb": 9.48,
+       "ins": 0.87,
+       "vendor": false
+      },
+      {
+       "model": "Aisyah 1.0 Flash",
+       "org": "Revolab",
+       "pub": 7.98,
+       "priv": 11.81,
+       "comb": 10.03,
+       "ins": 0.72,
+       "vendor": true
+      },
+      {
+       "model": "Gemini 2.5 Flash",
+       "org": "Google",
+       "pub": 9.05,
+       "priv": 12.25,
+       "comb": 10.76,
+       "ins": 2.48,
+       "vendor": false
+      },
+      {
+       "model": "Whisper large-v3",
+       "org": "OpenAI",
+       "pub": 15.62,
+       "priv": 18.76,
+       "comb": 17.3,
+       "ins": 2.73,
+       "vendor": false
+      },
+      {
+       "model": "Qwen3-ASR-1.7B (official)",
+       "org": "Alibaba",
+       "pub": 15.26,
+       "priv": 21.2,
+       "comb": 18.43,
+       "ins": 1.09,
+       "vendor": false
+      },
+      {
+       "model": "Universal 2",
+       "org": "AssemblyAI",
+       "pub": 14.86,
+       "priv": 22.25,
+       "comb": 18.8,
+       "ins": 0.7,
+       "vendor": false
+      },
+      {
+       "model": "Universal 3.5 Pro",
+       "org": "AssemblyAI",
+       "pub": 14.88,
+       "priv": 22.23,
+       "comb": 18.8,
+       "ins": 0.71,
+       "vendor": false
+      },
+      {
+       "model": "Qwen3-ASR-0.6B (official)",
+       "org": "Alibaba",
+       "pub": 20.73,
+       "priv": 27.21,
+       "comb": 24.19,
+       "ins": 1.25,
+       "vendor": false
+      },
+      {
+       "model": "Gemini 3.6 Flash",
+       "org": "Google",
+       "pub": 15.01,
+       "priv": 32.87,
+       "comb": 24.55,
+       "ins": 14.35,
+       "vendor": false
+      },
+      {
+       "model": "Nova 3",
+       "org": "Deepgram",
+       "pub": 25.63,
+       "priv": 37.55,
+       "comb": 31.99,
+       "ins": 0.94,
+       "vendor": false
+      }
+     ],
+     "dec": {
+      "pub": 2,
+      "priv": 2,
+      "comb": 2,
+      "ins": 2
+     }
+    }
+   ],
+   "prices": {
+    "title": "Published API prices in RM (ILMU only, so far)",
+    "source": "ILMU API docs",
+    "url": "https://docs.ilmu.ai/docs/models/pricing",
+    "retrieved": "2026-10-28",
+    "columns": [
+     [
+      "model",
+      "Model"
+     ],
+     [
+      "price",
+      "Price"
+     ],
+     [
+      "derived",
+      "Per hour of audio (our arithmetic)"
+     ]
+    ],
+    "rows": [
+     {
+      "model": "ilmu-asr-v4.2",
+      "price": "RM 0.0002 / second",
+      "derived": "≈ RM 0.72"
+     }
+    ],
+    "note": "RM prices for other vendors are coming soon."
+   }
+  },
+  {
+   "id": "tts",
+   "label": "Text-to-speech",
+   "intro": "No Malay-specific TTS ranking we can verify yet.",
+   "boards": [],
+   "coming_soon": {
+    "headline": "Coming soon — being benchmarked",
+    "body": "We found no public Bahasa Malaysia TTS ranking we can trust and verify. Voice Arena publishes a 'Bahasa' TTS leaderboard (blind native-speaker voting), but it does not clearly state whether that is Malaysian Malay or Indonesian, so we are not copying its numbers here until we confirm. Our own blind listening test (native Malaysian raters, formal BM + casual Manglish sentences) is planned — see the methodology page.",
+    "links": [
+     [
+      "Voice Arena TTS leaderboard (language: Bahasa)",
+      "https://voicearena.com/tts-leaderboard/"
+     ],
+     [
+      "Voice Arena methodology",
+      "https://voicearena.com/tts-methodology"
+     ]
+    ]
+   },
+   "prices": {
+    "title": "Published API prices in RM (ILMU only, so far)",
+    "source": "ILMU API docs",
+    "url": "https://docs.ilmu.ai/docs/models/pricing",
+    "retrieved": "2026-10-28",
+    "columns": [
+     [
+      "model",
+      "Model"
+     ],
+     [
+      "price",
+      "Price"
+     ]
+    ],
+    "rows": [
+     {
+      "model": "ilmu-tts-v2 / ilmu-tts-v2.1",
+      "price": "RM 0.08 per 1,000 characters"
+     }
+    ],
+    "note": "Prices only. No quality score for ILMU TTS is shown because we have none from a source yet."
+   }
+  }
+ ]
+}
