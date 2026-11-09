@@ -1,5 +1,7 @@
 import json
 R="2026-10-28"
+# Chat PAYG rates rechecked 2026-11-09. Speech prices were not changed, so they keep R.
+CHAT_PRICES_RETRIEVED="2026-11-09"
 sea_rows_raw = """Qwen 3.5 122B MoE|Alibaba|76.31|-1.72|1.80|64.19|88.70|85.99|86.35|91.94|73.43|43.58
 Gemma 4 31B|Google|76.27|-1.70|1.77|65.45|90.72|83.96|85.29|93.09|74.15|41.21
 Qwen 3.6 27B|Alibaba|76.26|-1.76|1.72|71.14|89.19|84.00|86.08|92.32|71.78|39.31
@@ -60,9 +62,9 @@ data={
     "caveat":"Self-reported by the model's maker, and the compared models are older (e.g. GPT-4o). The MalayMMLU benchmark itself comes from UM × YTL AI Labs, which also makes ILMU. Independent commentators have questioned whether first-token scoring favours some models; we list only what ILMU published.",
     "columns":[["model","Model"],["org","Maker"],["acc","MalayMMLU %"]],"primary":"acc","rows":ilm}
   ],
-  "prices":{"title":"Published API prices in RM (ILMU only, so far)","source":"ILMU API docs","url":"https://docs.ilmu.ai/docs/models/pricing","retrieved":R,
+  "prices":{"title":"Published API prices in RM (ILMU only, so far)","source":"ILMU API docs","url":"https://docs.ilmu.ai/docs/models/pricing","retrieved":CHAT_PRICES_RETRIEVED,
    "columns":[["model","Model"],["input","Input / 1M tokens"],["output","Output / 1M tokens"]],
-   "rows":[{"model":"ilmu-v3.1","input":"RM 4.00","output":"RM 16.00"},{"model":"ilmu-mini-v3.3","input":"RM 0.20","output":"RM 1.20"},{"model":"ilmu-vision-v1.3","input":"RM 1.60","output":"RM 4.80"}],
+   "rows":[{"model":"ilmu-v3.1","input":"RM 4.00","output":"RM 16.00"},{"model":"ilmu-mini-v3.3","input":"RM 0.20","output":"RM 1.20"},{"model":"ilmu-vision-v1.3","input":"RM 1.60","output":"RM 4.80"},{"model":"ilmu-glm-5.3","input":"RM 5.15","output":"RM 16.05"},{"model":"ilmu-glm-5.3-flash","input":"RM 0.55","output":"RM 1.85"}],
    "note":"RM prices for the other vendors are coming soon (we will convert from official USD price pages and show the exchange rate and date used)."}},
  {"id":"stt","label":"Speech-to-text","intro":"Word error rate (WER, lower is better) on Malaysian speech including Manglish-style code-switching.",
   "boards":[
