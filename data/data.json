@@ -674,7 +674,7 @@
     "title": "Published API prices in RM (ILMU only, so far)",
     "source": "ILMU API docs",
     "url": "https://docs.ilmu.ai/docs/models/pricing",
-    "retrieved": "2026-10-28",
+    "retrieved": "2026-11-09",
     "columns": [
      [
       "model",
@@ -704,6 +704,16 @@
       "model": "ilmu-vision-v1.3",
       "input": "RM 1.60",
       "output": "RM 4.80"
+     },
+     {
+      "model": "ilmu-glm-5.3",
+      "input": "RM 5.15",
+      "output": "RM 16.05"
+     },
+     {
+      "model": "ilmu-glm-5.3-flash",
+      "input": "RM 0.55",
+      "output": "RM 1.85"
      }
     ],
     "note": "RM prices for the other vendors are coming soon (we will convert from official USD price pages and show the exchange rate and date used)."
